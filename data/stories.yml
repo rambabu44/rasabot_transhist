@@ -1,0 +1,27 @@
+version: "3.1"
+
+stories:
+
+- story: greet and checkbalance
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: check_balance
+  - action: utter_ask_account_number
+  - intent: account_number
+  - action: utter_check_balance
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: greet and checktransactionhistory
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: transaction_history
+  - action: utter_ask_account_number
+  - intent: account_number
+  - action: get_transaction_history
+  - intent: goodbye
+  - action: utter_goodbye
+
+

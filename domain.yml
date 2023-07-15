@@ -1,0 +1,45 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - check_balance
+  - account_number
+  - transaction_history
+
+
+entities:
+  - account_number
+
+slots:
+  account_number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: account_number
+
+
+
+
+actions:
+  - action_check_balance
+  - action_check_transaction_history
+
+
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How Hare you?"
+
+  
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_ask_account_number:
+  - text: "Please provide account number"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

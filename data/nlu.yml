@@ -1,0 +1,55 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: check_balance
+  examples: |
+    - Check my balance
+    - How much money do i have in my account
+    - What is my account balance
+  
+- intent: account_number
+  examples: |
+    - it is [1254789652321456](account_number)
+    - my account number is [1202145210236521](account_number)
+    - [1254789652365478](account_number)
+
+
+- intent: transaction_history
+  examples: |
+    - show me my transaction history
+    - what are my recent transactions?
+    - can you provide the details of my transaction?
+    - my transaction history please
+    
+
+
+
