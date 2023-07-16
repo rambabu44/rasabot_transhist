@@ -24,7 +24,7 @@ This is simple chatbot to interact and findout the balance and the transaction h
 
 5. Bot is ready to intereact
    
-##Sample Conversation with chatbot.
+## Sample Conversation with chatbot.
 ![Screenshot (65)](https://github.com/rambabu44/rasabot_transhist/assets/48267686/40492fb4-42d5-4313-997d-e94daeb0ba07)
 
 
