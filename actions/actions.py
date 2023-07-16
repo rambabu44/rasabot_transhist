@@ -1,4 +1,4 @@
-
+# A dictionary for account information of customers with account number as key
 account_details = {
     "9874563210123687": {
         "name": "John Doe",
@@ -11,7 +11,7 @@ account_details = {
         "balance": 1002,
     }
 }
-
+# A dictionary for transaction history where a nested disctionary is used to record the balance with description in the key as timestamp
 transaction_history = {
     "9874563210123687": {
         "2023-05-05" :{
@@ -42,6 +42,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
+#to return balance in a format as per task.
 class ActionCheckBalance(Action):
     def name(self) -> Text:
         return "action_check_balance"
@@ -58,6 +59,7 @@ class ActionCheckBalance(Action):
         dispatcher.utter_message(text=response)
         return []
 
+#to return transaction history 
 class ActionCheckTransactionHistory(Action):
     def name(self) -> Text:
         return "action_check_transaction_history"

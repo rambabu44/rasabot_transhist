@@ -37,6 +37,9 @@ nlu:
     - What is my account balance
     - show me my bank balance
     - show balance details
+    - details of my account please
+    - please tell my account information
+    
   
 - intent: account_number
   examples: |
@@ -45,13 +48,6 @@ nlu:
     - [1254789652365478](account_number)
 
 
-- intent: transaction_history
-  examples: |
-    - tell me the transaction history
-    - show me my transaction history
-    - what are my recent transactions?
-    - can you provide the details of my transaction?
-    - my transaction history please
     
 
 

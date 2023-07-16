@@ -10,20 +10,9 @@ stories:
   - action: utter_ask_account_number
   - intent: account_number
   - action: action_check_balance
-  # - intent: transaction_history
-  # - action: utter_ask_account_number
-  # - intent: account_number
   - action: action_check_transaction_history
   - intent: goodbye
   - action: utter_goodbye
 
-# - story: greet and checktransactionhistory
-#   steps:
-#   - intent: transaction_history
-#   - action: utter_ask_account_number
-#   - intent: account_number
-#   - action: action_check_transaction_history
-#   - intent: goodbye
-#   - action: utter_goodbye
 
 

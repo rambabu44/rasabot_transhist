@@ -2,12 +2,4 @@
 
 # rules:
 
-# - rule: Say goodbye anytime the user says goodbye
-#   steps:
-#   - intent: goodbye
-#   - action: utter_goodbye
 
-# - rule: transaction after balance
-#   steps:
-#   - action: action_check_balance
-#   - intent: transaction_history

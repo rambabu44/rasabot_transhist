@@ -5,7 +5,7 @@ intents:
   - goodbye
   - check_balance
   - account_number
-  - transaction_history
+
 
 
 entities:
