@@ -32,9 +32,11 @@ nlu:
 
 - intent: check_balance
   examples: |
-    - Check my balance
+    - Check my balance 
     - How much money do i have in my account
     - What is my account balance
+    - show me my bank balance
+    - show balance details
   
 - intent: account_number
   examples: |
@@ -45,6 +47,7 @@ nlu:
 
 - intent: transaction_history
   examples: |
+    - tell me the transaction history
     - show me my transaction history
     - what are my recent transactions?
     - can you provide the details of my transaction?

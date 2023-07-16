@@ -15,8 +15,6 @@ stories:
 
 - story: greet and checktransactionhistory
   steps:
-  - intent: greet
-  - action: utter_greet
   - intent: transaction_history
   - action: utter_ask_account_number
   - intent: account_number

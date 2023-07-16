@@ -30,7 +30,7 @@ actions:
 
 responses:
   utter_greet:
-  - text: "Hey! How Hare you?"
+  - text: "Hey! How can I help you?"
 
   
   utter_goodbye:

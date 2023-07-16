@@ -1,31 +1,3 @@
-# This files contains your custom actions which can be used to run
-# custom Python code.
-#
-# See this guide on how to implement these action:
-# https://rasa.com/docs/rasa/custom-actions
-
-
-# This is a simple example for a custom action which utters "Hello World!"
-
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
-
 
 account_details = {
     "9874563210123687": {
@@ -42,18 +14,28 @@ account_details = {
 
 transaction_history = {
     "9874563210123687": {
-        { 
-        "timestamp": "2023-05-05",
-        "balance": 50,
-        "description": "salary"},
-        {
-           { 
-        "timestamp": "2023-05-06",
-        "balance": 60,
-        "description": "bonus"} 
+        "2023-05-05" :{
+            "balance": 50,
+            "description": "salary"
+        },
+        "2023-05-06" :{
+            "balance": 60,
+            "description": "bonus"
+        }
+    },
+    "9874563210123688": {
+        "2023-04-05" :{
+            "balance": 150,
+            "description": "salary"
+        },
+        "2023-04-06" :{
+            "balance": 160,
+            "description": "bonus"
         }
     }
+    
 }
+
 
 
 from typing import Any, Text, Dict, List
@@ -85,18 +67,13 @@ class ActionCheckTransactionHistory(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         account_number = tracker.get_slot("account_number")
         if account_number in transaction_history:
-            # Simulating transaction history retrieval
-            transaction_history = transaction_history(account_number)
-
-            if transaction_history:
-                response = "Here is your transaction history:\n"
-                for transaction in transaction_history:
-                    timestamp = transaction['timestamp']
-                    amount = transaction['balance']
-                    description = transaction['description']
-                    response += f"- {timestamp}: Rs. {amount}, {description}\n"
-            else:
-                response = "No transaction history found for your account."
+            getTransHistory = transaction_history[account_number]
+            response = "Here is your transaction history:\n"
+            for transaction in getTransHistory:
+                timestamp = transaction
+                amount = getTransHistory[str(timestamp)]['balance']
+                description = getTransHistory[str(timestamp)]['description']
+                response += f"- {timestamp}: Rs. {amount}, {description}\n"
         else:
             response = "Sorry, I couldn't find any account with the provided account number."
 
